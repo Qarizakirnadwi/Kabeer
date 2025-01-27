@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* General Reset */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('medi\ instru.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+/* content-top */
+
+
+.content-top{
+    height: 50px;
+    background-color: #4a6901;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.top{
+    margin-left: 20px;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.top a{
+    text-decoration: none;
+    color: #1a0004;
+    font-weight: bolder;
+    
+}
+.search{
+    width: 700px;
+    padding: 20px;
+    border: none;
+    border-style: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding-left: 5px;
+    border-radius: 20px;
+    
+}
+.search input{
+    height: 45px;
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3505e4;
+    color: #fff;
+    padding: 10px 20px;
+}
+.logo {
+    width: 50px;  /* Adjust the width */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;
+    border-radius: 5px;
+}
+
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+.navbar ul li {
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+.navbar ul li a:hover {
+    background-color: #f50699;
+    border-radius: 10px;
+}
+
+/* Dropdown Menu */
+.navbar ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    min-width: 200px;
+    z-index: 1000;
+}
+.navbar ul li:hover ul {
+    display: block;
+}
+.navbar ul li ul li a {
+    padding: 10px;
+}
+.navbar .toggle{
+    display: none;
+}
+/* carousel */
+.carousel{
+ 
+    display: flex;
+    justify-content: center;
+ 
+}
+.slider{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.slides{
+    height: 550px;
+    width: 800%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    transition: 1s ease-in-out;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    
+}
+.slide img{
+    height: 100%;
+    width: 50%;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: -100px;
+    margin-top: -100px;
+   
+}
+
+button {
+    display: none;
+    border: none;
+    outline: none;
+    background-color: teal;
+    font-size: 55px;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(88, 1, 49);
+}
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+    .navbar .toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+    .search{
+        width: 100%;
+        height: auto;
+        
+    }
+    .search input{
+        width: 100%;
+        background-color: #ee0901;
+        color: white;
+        font-size: 14px;
+    }
+    .slider{
+        height: 500px;
+    }
+    .slides{
+        height: 500px;
+        width: 1000%;
+        margin: 0 30%;
+        overflow: hidden;
+        display: flex;
+        transition: 1s ease-in-out;
+    }
+    .slide img{
+        height: 100%;
+        width: 100%;
+    
+}
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    height: -100px;
+    margin-top: -100px;
+   }
+   button{
+    display: none;
+    font-size: 30px;
+    margin: 20px;
+   }
+}
